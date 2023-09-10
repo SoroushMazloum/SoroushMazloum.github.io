@@ -1,0 +1,18 @@
+body
+{
+    font-family: 'Retro Gaming';
+    background-color: rgb(32, 31, 31);
+}
+
+a
+{
+    color: rgb(207, 207, 99);
+    text-decoration: none;
+
+}
+
+a:hover
+{
+    color: rgb(163, 84, 253);
+    transition: all 1s;
+}
