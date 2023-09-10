@@ -16,3 +16,10 @@ a:hover
     color: rgb(163, 84, 253);
     transition: all 1s;
 }
+
+.Top-Menu
+{
+  font-family: 'Retro Gaming';
+  font-size: 15px;
+  margin-left: 1%;
+}
