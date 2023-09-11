@@ -23,3 +23,14 @@ a:hover
   font-size: 15px;
   margin-left: 1%;
 }
+
+div div  ul li
+{
+    list-style: none;
+    display: inline;
+}
+
+div div ul
+{
+    display: inline;
+}
