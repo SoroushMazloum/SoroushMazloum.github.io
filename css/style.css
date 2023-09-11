@@ -1,6 +1,17 @@
+@font-face 
+{
+    font-family: 'Retro';
+    src: url('../fonts/RetroGaming.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Slim';
+    src: url('../fonts/Slim-Thirteen-Pixel-Fonts.ttf') format('truetype');
+}
+
 body
 {
-    font-family: 'Retro Gaming';
+    font-family: 'Retro';
     background-color: rgb(32, 31, 31);
 }
 
