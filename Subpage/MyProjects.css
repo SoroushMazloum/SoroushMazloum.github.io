@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  
+  td, th 
+  {
+    border: 1px solid green;
+    text-align: left;
+    padding: 8px;
+    border-collapse: separate;
+    text-align: center;
+  }
+  td
+  {
+      font-size: 12px;
+      font-style: italic;
+  }
