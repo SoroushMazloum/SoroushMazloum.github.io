@@ -16,14 +16,14 @@ TEL;TYPE=HOME,FAX:
 TEL;TYPE=WORK,FAX:
 ADR;CHARSET=UTF-8;TYPE=HOME:;;;;;;
 ADR;CHARSET=UTF-8;TYPE=WORK:;;;;;;
-TITLE;CHARSET=UTF-8:Soccer 2D Simulation team
-ORG;CHARSET=UTF-8:EMPEROR-SS2D-Team
-URL;type=WORK;CHARSET=UTF-8:https://github.com/EMPEROR-SS2D-Team
+TITLE;CHARSET=UTF-8:
+ORG;CHARSET=UTF-8:
+URL;type=WORK;CHARSET=UTF-8:
 NOTE;CHARSET=UTF-8:https://soroushgit.github.io
 URL;TYPE=facebook:
 URL;TYPE=twitter:
 URL;TYPE=linkedin:
-URL;TYPE=instagram:https://instagram.com/soroushmazloum?igshid=MzNlNGNkZWQ4Mg==
+URL;TYPE=instagram:https://instagram.com/soroushmazloum
 URL;TYPE=youtube:
 URL;TYPE=tiktok:
 REV:2023-03-27T10:56:19.464Z
