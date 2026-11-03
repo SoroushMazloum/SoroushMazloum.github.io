@@ -57,17 +57,19 @@ a:focus-visible {
 .site-content {
     width: min(92%, 1200px);
     min-height: 100vh;
-    margin: 0 auto 0 5%;
+    margin: 0 auto;
     padding: 18px 24px 24px;
     display: flex;
     flex-direction: column;
 }
 
 .site-header {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .site-header nav {
