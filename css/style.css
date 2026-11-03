@@ -46,3 +46,27 @@ div div ul
     display: inline;
     font-family: 'Retro';
 }
+
+.site-header {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    text-align: center;
+}
+
+.site-header .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .site-nav li {
+    display: inline-block;
+}
+
+.site-header .site-nav a {
+    display: inline-block;
+    padding: 8px 2px;
+}
