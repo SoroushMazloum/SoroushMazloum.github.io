@@ -1,5 +1,4 @@
-@font-face 
-{
+@font-face {
     font-family: 'Retro';
     src: url('../fonts/RetroGaming.ttf') format('truetype');
 }
@@ -9,40 +8,218 @@
     src: url('../fonts/Slim-Thirteen-Pixel-Fonts.ttf') format('truetype');
 }
 
-body
-{
-    font-family: 'Retro';
-    background-color: rgb(32, 31, 31);
+* {
+    box-sizing: border-box;
 }
 
-a
-{
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgb(32, 31, 31);
+    color: rgb(230, 230, 230);
+    font-family: 'Retro', sans-serif;
+}
+
+a {
     color: rgb(207, 207, 99);
     text-decoration: none;
-
 }
 
-a:hover
-{
+a:hover {
     color: rgb(163, 84, 253);
-    transition: all 1s;
+    transition: color 0.2s ease;
 }
 
-.Top-Menu
-{
-  font-family: 'Retro';
-  font-size: small;
-  margin-left: 0.2%;
+a:focus-visible {
+    outline: 2px solid aqua;
+    outline-offset: 4px;
 }
 
-div div  ul li
-{
+.line-numbers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: rgb(78, 78, 78);
+    line-height: 1.5;
+    user-select: none;
+}
+
+.page-gutter {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 3%;
+    width: 1px;
+    background-color: rgb(56, 56, 56);
+}
+
+.site-content {
+    width: min(92%, 1200px);
+    min-height: 100vh;
+    margin: 0 auto 0 5%;
+    padding: 18px 24px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.site-header nav {
+    width: 100%;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    display: inline;
 }
 
-div div ul
-{
-    display: inline;
-    font-family: 'Retro';
+.site-nav a {
+    display: inline-block;
+    padding: 8px 2px;
+    font-size: small;
+}
+
+.site-nav a[aria-current="page"] {
+    color: aqua;
+}
+
+.intro {
+    max-width: 760px;
+    margin: 62px auto 0;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.skills {
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.skills h1 {
+    margin: 0 0 16px;
+    color: orange;
+    font-family: 'Retro', sans-serif;
+    font-size: 1.1rem;
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-icons img {
+    object-fit: contain;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: auto;
+    padding-top: 56px;
+}
+
+.social-links img {
+    display: block;
+}
+
+.contact-card {
+    width: min(94%, 680px);
+    margin: 24px auto;
+    padding: 28px 20px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.contact-card p:first-child {
+    margin-top: 0;
+}
+
+.contact-and {
+    color: green;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 20px;
+    border: 1px dotted orange;
+    color: aqua;
+    font-family: 'Slim', sans-serif;
+    font-size: clamp(24px, 6vw, 36px);
+}
+
+@media (max-width: 700px) {
+    .line-numbers,
+    .page-gutter {
+        display: none;
+    }
+
+    .site-content {
+        width: 100%;
+        margin: 0;
+        padding: 20px 18px 24px;
+    }
+
+    .site-header {
+        align-items: center;
+    }
+
+    .site-nav {
+        gap: 2px 14px;
+    }
+
+    .site-nav a {
+        padding: 8px 0;
+        font-size: 0.68rem;
+    }
+
+    .intro {
+        margin-top: 48px;
+        font-size: 0.75rem;
+    }
+
+    .skills {
+        margin-top: 48px;
+    }
+
+    .skill-icons {
+        gap: 14px;
+    }
+
+    .social-links {
+        padding-top: 48px;
+    }
+
+    .contact-card {
+        margin: 16px auto;
+        padding: 24px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }

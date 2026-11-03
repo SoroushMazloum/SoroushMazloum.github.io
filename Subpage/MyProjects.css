@@ -1,20 +1,143 @@
-table {
+.projects-page {
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+
+.home-link {
+    color: aqua;
+    font-size: 15px;
+}
+
+.page-title {
+    margin: 30px 0;
+    color: orange;
+    font-family: 'Slim', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.project-table {
     border-collapse: collapse;
     width: 100%;
     font-size: 15px;
     border-radius: 5px;
-  }
-  
-  td, th 
-  {
+}
+
+.project-table td,
+.project-table th {
     border: 1px solid green;
-    text-align: left;
     padding: 8px;
-    border-collapse: separate;
     text-align: center;
-  }
-  td
-  {
-      font-size: 12px;
-      font-style: italic;
-  }
+}
+
+.project-table td {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.project-languages {
+    color: rgb(125, 190, 96);
+}
+
+.github-note {
+    margin-top: 24px;
+    color: rgb(213, 213, 213);
+    font-family: 'Retro', sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+.jupiter-page {
+    width: min(94%, 900px);
+    margin: 0 auto;
+    padding: 20px 0 32px;
+}
+
+.jupiter-content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.jupiter-download {
+    margin: 36px 0;
+}
+
+.jupiter-table th,
+.jupiter-table td {
+    border-radius: 0;
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+    .projects-page {
+        padding: 20px 16px;
+    }
+
+    .page-title {
+        margin: 28px 0;
+        font-size: 20px;
+    }
+
+    .project-table,
+    .project-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .project-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    .project-table tr {
+        display: block;
+        margin-bottom: 16px;
+        border: 1px solid green;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .project-table td {
+        display: grid;
+        grid-template-columns: minmax(88px, 30%) 1fr;
+        gap: 12px;
+        border: 0;
+        border-bottom: 1px solid rgb(63, 91, 63);
+        padding: 10px;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    .project-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .project-table td::before {
+        content: attr(data-label);
+        color: rgb(170, 170, 170);
+        font-style: normal;
+    }
+
+    .jupiter-page {
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .jupiter-content {
+        width: 100%;
+    }
+
+    .jupiter-download {
+        margin: 28px 0;
+        overflow-wrap: anywhere;
+    }
+
+    .jupiter-table td {
+        display: grid;
+    }
+}
