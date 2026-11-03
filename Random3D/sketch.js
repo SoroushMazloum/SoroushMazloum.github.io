@@ -1,8 +1,6 @@
-
-
 let grid;
 let spacing = 20;
-let cols, rows;
+let cols, rows, depth;
 let path = [];
 let spot;
 
@@ -37,7 +35,10 @@ function setup() {
   spot = grid[cx][rx][dx];
   path.push(spot);
   spot.visited = true;
-  // frameRate(1);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function isValid(i, j, k) {
@@ -74,11 +75,10 @@ function draw() {
   lerpX = lerp(lerpX, center.x, amt);
   lerpY = lerp(lerpY, center.y, amt);
   lerpZ = lerp(lerpZ, center.z, amt);
-  //orbitControl();
-  // translate(-spacing * cols * 0.5, -spacing * rows * 0.5, -spacing * depth * 0.5);
+
   rotateY(frameCount * 0.002);
   translate(-lerpX, -lerpY, -lerpZ);
-  // for (let i = 0; i < 500000; i++) {
+
   spot = spot.nextSpot();
   if (!spot) {
     let stuck = path.pop();
@@ -92,35 +92,18 @@ function draw() {
   if (path.length === cols * rows * depth) {
     console.log("Solved!");
     noLoop();
-    // break;
   }
-  //}
 
-  stroke(255);
   strokeWeight(spacing * 0.1);
   noFill();
 
   colorMode(HSB);
   for (let i = 0; i < path.length - 1; i++) {
     let v1 = path[i];
-    // path[i].x += random(-0.1,0.1);
-    // path[i].y += random(-0.1,0.1);
-    // path[i].z += random(-0.1,0.1);
     let v2 = path[i + 1];
-    // let r = map(v1.i,0,cols,100, 255);
-    // let g = map(v1.j,0,rows,100, 255);
-    // let b = map(v1.k,0,depth,100, 255);
-    // stroke(r,g,b);
     stroke((i + frameCount) % 360, 100, 100);
-
     line(v1.x, v1.y, v1.z, v2.x, v2.y, v2.z);
   }
-
-  // beginShape();
-  // for (let spot of path) {
-  //   vertex(spot.x, spot.y, spot.z);
-  // }
-  // endShape();
 
   stroke(255);
   strokeWeight(spacing * 0.5);
